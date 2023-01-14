@@ -3,14 +3,15 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>io.github.askmohanty</groupId>
+    <groupId>io.github.askmohanty.software</groupId>
     <artifactId>spring-superpom</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.7.7</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
     <developers>
         <developer>
@@ -22,7 +23,6 @@
     </developers>
     <properties>
         <java.version>11</java.version>
-        <springboot.version>2.7.7</springboot.version>
     </properties>
 
     <dependencies>
@@ -37,5 +37,12 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/askmohanty/spring-superpom</url>
+        </repository>
+    </distributionManagement>
     
 </project>
